@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+{% if messages %}
+{% for message in messages  %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show my-0 py-2" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+{% endif %}
+<div class="container-fluid px-0 mb-3">
+    <img src="../static/img/contactus.webp" class="d-block w-100 mx-0" alt ="..." height=400px>
+    </div>
+    <div class="container mb-3 py-4">
+    <h1 class="text-center">Contact Us</h1>
+  
+
+
+<form method="post" action="/contact">
+{% csrf_token %}
+
+<div class="mb-3">
+    <label for="mail" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+  </div>
+<div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+  </div>
+<div class="mb-3">
+    <label for="phoneno" class="form-label">Phone No.</label>
+    <input type="number" class="form-control" id="phoneno" placeholder="Enter Your Phone Number" name="phone">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Subject</label>
+    <textarea class="form-control" id="subject" rows="1" name="subject"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+{% endblock body %}
