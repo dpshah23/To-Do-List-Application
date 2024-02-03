@@ -1,0 +1,12 @@
+{
+      "builds":[{
+        "src":"todolist/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxLambdaSize":"15mb","runtime":"python 3.10"}
+
+      }],
+      "routes":[{
+        "src":"/(.*)",
+        "dest":"todolist/wsgi.py"
+      }]
+}
