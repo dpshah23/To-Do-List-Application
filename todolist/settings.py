@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'jazzmin',
+    'pwa',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,35 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todolistapp',
 ]
+
+# Progress Web App
+
+PWA_APP_NAME = 'To-Do List'
+PWA_APP_DESCRIPTION = 'A simple To-Do List app'
+PWA_APP_THEME_COLOR = '#000000'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/img/to-do-list.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': '/static/img/to-do-list.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/img/to-do-list.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

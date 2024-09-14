@@ -23,7 +23,8 @@ handler404 = custom_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('todolistapp.urls'))
+    path('',include('todolistapp.urls')),
+    path('', include('pwa.urls')),
 ]
 
 admin.site.site_header = "To Do List App Admin"
