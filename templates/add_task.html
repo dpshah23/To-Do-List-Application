@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Add Task {% endblock title %}
 {% block body %}
-<link rel="stylesheet" href="../static/css/login.css">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
